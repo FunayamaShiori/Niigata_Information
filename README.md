@@ -1,51 +1,40 @@
-# CakePHP Application Skeleton
+#**Niigata_Information(新潟特産物サイト)**
 
-[![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
+-地元新潟の特産物ECサイトです
 
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 3.x.
+-トップページ：http://192.168.33.10/sample/  
 
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
+-管理者ページ：http://192.168.33.10/sample/carts/admincarts
 
-## Installation
+#テスト用アカウント
 
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
+-管理者
+ID/ito@gmail.com
+Pass/itoito
 
-If Composer is installed globally, run
+#開発環境
+-CakePHP3.8.10
+-PHP7.4.7
+-Centos7
+-vagrant2.2.9
+  
+#動作確認方法
+##カートに入れる
+1.Topページ右上のログインからテスト用管理者アカウントでログイン
+※ログインしないとカートページに遷移しません
+2.商品の数量を選択して、『カートに入れる』ボタンを押す
+3.確認画面に遷移するので、購入完了ボタンを押すと、Cartsテーブルに保存され、管理者ページにも反映されます。
 
-```bash
-composer create-project --prefer-dist cakephp/app
-```
+##管理者ページ
+1.注文リストの右側『顧客情報』を押すと顧客情報が出てくる
+2.管理者のみedit(編集)できます
+3.ユーザー一覧も確認できます
 
-In case you want to use a custom app dir name (e.g. `/myapp/`):
+#cartsテーブル
+-購入完了ボタンがおされたら、保存される
 
-```bash
-composer create-project --prefer-dist cakephp/app myapp
-```
+#usersテーブル
+-ユーザー新規登録されたら保存される
 
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
-
-```bash
-bin/cake server -p 8765
-```
-
-Then visit `http://localhost:8765` to see the welcome page.
-
-## Update
-
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
-
-## Configuration
-
-Read and edit `config/app.php` and setup the `'Datasources'` and any other
-configuration relevant for your application.
-
-## Layout
-
-The app skeleton uses a subset of [Foundation](http://foundation.zurb.com/) (v5) CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
+#itemsテーブル
+-Topページの商品一覧に追加したい商品を追加できる
