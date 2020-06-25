@@ -1,0 +1,22 @@
+.header_top {
+  background-color: #0000CC;
+}
+.title h1 {
+  font-size: 24px;
+  color: #FFF;
+}
+.left {
+ width: 30%;
+}
+.title {
+  display: inline-block;
+}
+.menu {
+  font-size: 0;
+  float: right;
+}
+.menu li {
+  background-color: #0000CC;
+  display: inline-block;
+  font-size: 12px;
+}
